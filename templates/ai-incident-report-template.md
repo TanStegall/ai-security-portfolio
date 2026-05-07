@@ -1,172 +1,151 @@
-# AI Incident Report
+# AI Security Incident Report
 
-**Incident ID:** IR-AI-___________  
-**Date Opened:** ___________  
-**Date Closed:** ___________  
-**Severity:** SEV-1 / SEV-2 / SEV-3 / SEV-4  
+**Incident ID:** AIR-[YYYY]-[NNN]  
+**Date / Time Opened:** ___________  
+**Date / Time Closed:** ___________  
 **Incident Commander:** ___________  
-**Status:** Open / Contained / Closed
+**Severity:** [ ] P1 — Critical  [ ] P2 — High  [ ] P3 — Medium  [ ] P4 — Low  
+**Status:** [ ] Open  [ ] Contained  [ ] Resolved  
 
 ---
 
-## Section 1: Executive Summary
+## Executive Summary
 
-*2–3 sentence summary of what happened, impact, and resolution.*
+*2–3 sentence summary written for non-technical leadership. State what happened, what was affected, and current status.*
 
 ___________
 
 ---
 
-## Section 2: Incident Details
+## Incident Classification
 
 | Field | Detail |
 |-------|--------|
-| Affected System(s) | |
-| Incident Type | Prompt Injection / Data Poisoning / Unauthorized Agent Action / Model Evasion / Exfiltration / Other |
-| Discovery Method | Automated Alert / User Report / Red Team / Audit |
-| Discovery Date & Time | |
-| Incident Start (estimated) | |
-| Containment Date & Time | |
-| Resolution Date & Time | |
-| Users/Systems Impacted | |
+| **Type** | [ ] Prompt Injection  [ ] Data Poisoning  [ ] Unauthorized Agent Action  [ ] Data Leakage  [ ] Model Evasion  [ ] Supply Chain  [ ] Other: ___________ |
+| **ATLAS Technique(s)** | ___________  |
+| **OWASP LLM Category** | ___________  |
+| **Affected System(s)** | ___________  |
+| **Discovery Method** | [ ] Automated Alert  [ ] User Report  [ ] Red Team  [ ] Audit  [ ] External Report |
 
 ---
 
-## Section 3: Timeline
+## Timeline
 
-| Date/Time | Event | Actor | Notes |
-|-----------|-------|-------|-------|
-| | Incident begins (estimated) | | |
-| | First indicator observed | | |
-| | Alert triggered | | |
-| | Responder engaged | | |
-| | Incident confirmed | | |
-| | Containment action taken | | |
-| | Eradication complete | | |
-| | System restored | | |
-| | Incident closed | | |
+| Time | Event | Actor |
+|------|-------|-------|
+| T+0 | Incident detected | |
+| T+___ | Alert escalated | |
+| T+___ | Incident confirmed | |
+| T+___ | Containment action taken | |
+| T+___ | System isolated / suspended | |
+| T+___ | Root cause identified | |
+| T+___ | Fix deployed | |
+| T+___ | System restored | |
+| T+___ | Incident closed | |
 
 ---
 
-## Section 4: Technical Analysis
+## Root Cause Analysis
 
-### Attack Vector
-*How did the attacker/issue gain initial access or cause the incident?*
-
-___________
-
-### Root Cause
-*What underlying vulnerability, misconfiguration, or gap enabled this?*
+*The fundamental vulnerability or gap that enabled this incident. Be specific — not "insufficient controls" but what exactly was missing or misconfigured.*
 
 ___________
 
-### Evidence Collected
-- [ ] Conversation / prompt logs
-- [ ] Agent tool call logs
+**Contributing factors:**
+1. 
+2. 
+
+---
+
+## Impact Assessment
+
+| Field | Detail |
+|-------|--------|
+| Users affected | |
+| Data exposed (type / volume) | |
+| Actions taken by AI system | |
+| Systems / integrations impacted | |
+| Service downtime | |
+| Financial impact (if known) | |
+| Reputational impact | Low / Medium / High |
+
+---
+
+## Evidence Collected
+
+- [ ] Prompt / conversation logs
+- [ ] Agent tool call history
 - [ ] System prompt (version at time of incident)
-- [ ] Retrieved context / knowledge base content
-- [ ] Network logs (if external requests made)
+- [ ] Retrieved context (if RAG involved)
 - [ ] Output logs
+- [ ] Network / API request logs
 - [ ] User authentication records
 
 **Evidence storage location:** ___________
 
-### ATLAS Technique(s) Observed
-
-| Technique | ATLAS ID | Confirmed / Suspected |
-|-----------|----------|----------------------|
-| | | |
-| | | |
-
 ---
 
-## Section 5: Impact Assessment
+## Containment Actions Taken
 
-| Impact Type | Affected? | Details |
-|-------------|----------|---------|
-| Data exposure (PII, credentials, internal) | Yes / No | |
-| Unauthorized system access | Yes / No | |
-| Service disruption | Yes / No | |
-| Model/data integrity | Yes / No | |
-| Reputational | Yes / No | |
-| Regulatory / compliance | Yes / No | |
-| Financial | Yes / No | |
-
-**Regulatory notification required?** Yes / No  
-**If yes, framework:** GDPR / CCPA / HIPAA / Other: ___________  
-**Notification deadline:** ___________
-
----
-
-## Section 6: Containment Actions Taken
-
-| Action | Date/Time | Actor | Outcome |
-|--------|-----------|-------|---------|
+| Action | Time | Owner | Outcome |
+|--------|------|-------|---------|
 | | | | |
 | | | | |
 
 ---
 
-## Section 7: Eradication & Recovery
+## Preventive Controls Added
 
-| Step | Action Taken | Date | Verified By |
-|------|-------------|------|-------------|
-| Root cause patched | | | |
-| Affected content removed | | | |
-| Validation testing passed | | | |
-| Traffic restored | | | |
-| Monitoring enhanced | | | |
+1. 
+2. 
+3. 
+
+**Linked risk assessment update required?** [ ] Yes  [ ] No  
+**Agent access matrix update required?** [ ] Yes  [ ] No
 
 ---
 
-## Section 8: Lessons Learned
+## Regulatory Notification
 
-### What went well?
-1. 
-2. 
+| Requirement | Applicable? | Deadline | Notified? |
+|-------------|------------|----------|-----------|
+| GDPR 72-hour notification (Art. 33) | [ ] Yes  [ ] No | | [ ] Yes  [ ] No |
+| GDPR individual notification (Art. 34) | [ ] Yes  [ ] No | | [ ] Yes  [ ] No |
+| HIPAA breach notification | [ ] Yes  [ ] No | | [ ] Yes  [ ] No |
+| Other: ___________ | [ ] Yes  [ ] No | | [ ] Yes  [ ] No |
 
-### What could have been better?
-1. 
-2. 
-
-### What was missing (tools, playbooks, controls)?
-1. 
-2. 
+**Legal / DPO notified?** [ ] Yes  [ ] No  **Date:** ___________
 
 ---
 
-## Section 9: Remediation Actions
+## Lessons Learned
 
-| Action Item | Owner | Priority | Due Date | Status |
-|-------------|-------|----------|----------|--------|
-| | | High/Med/Low | | |
+| Question | Response |
+|----------|----------|
+| What detection worked well? | |
+| What slowed response down? | |
+| What control would have prevented this? | |
+| What playbook gap was exposed? | |
+
+---
+
+## Open Action Items
+
+| Action | Owner | Priority | Due Date | Status |
+|--------|-------|----------|----------|--------|
+| | | P1 / P2 / P3 | | |
 | | | | | |
-| | | | | |
 
 ---
 
-## Section 10: Metrics
+## Sign-Off
 
-| Metric | Value |
-|--------|-------|
-| MTTD (Minutes to Detect) | |
-| MTTC (Minutes to Contain) | |
-| MTTR (Hours to Recover) | |
-| Data records impacted | |
-| Systems impacted | |
-
----
-
-## Section 11: Approval & Distribution
-
-| Role | Name | Date | Signature |
-|------|------|------|-----------|
-| Incident Commander | | | |
-| Security Lead | | | |
-| CISO | | | |
-
-**Distribution list:** ___________  
-**Classification:** Confidential / Internal / Public
+| Role | Name | Date |
+|------|------|------|
+| Incident Commander | | |
+| Security Lead | | |
+| CISO (P1 / P2) | | |
+| Legal / DPO (if regulatory) | | |
 
 ---
 
