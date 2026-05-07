@@ -1,130 +1,119 @@
-# AI Risk Assessment Template
+# AI Risk Assessment
 
-**Assessment Date:** ___________  
-**Assessor:** ___________  
-**System Name:** ___________  
-**System Owner:** ___________  
-**Review Cycle:** Annual / Triggered by material change
+**System:** ___________  **Date:** ___________  **Assessor:** ___________  
+**System Owner:** ___________  **Review Cycle:** Annual / Triggered by material change
 
 ---
 
-## Section 1: System Overview
+## 1. System Overview
 
 | Field | Response |
 |-------|----------|
-| System Name | |
-| Business Purpose | |
-| AI/ML Components | |
-| Data Classifications Processed | |
-| External AI APIs Used | |
-| Deployment Environment | |
-| User Population | |
-| Go-Live Date | |
+| Purpose | |
+| Data inputs (type/classification) | |
+| Model provider | |
+| Deployment environment | |
+| External AI APIs used | |
+| User population | |
+| Public-facing? | Yes / No |
 
 ---
 
-## Section 2: AI-Specific Risk Factors
+## 2. Risk Classification (NIST AI RMF)
 
-Rate each factor: **1** (Negligible) → **5** (Critical)
+- **Risk level:** [ ] Low  [ ] Medium  [ ] High  [ ] Critical
+- **Justification:** ___________
 
 | Risk Factor | Score (1–5) | Notes |
 |-------------|------------|-------|
-| Autonomy Level (human oversight vs. fully autonomous) | | |
+| Autonomy level (human oversight vs. fully autonomous) | | |
 | Sensitivity of data accessed | | |
-| Scope of actions agent can take | | |
+| Scope of actions the system can take | | |
 | Reliance on external/third-party AI APIs | | |
 | Adversarial exposure (public-facing?) | | |
-| Interpretability of model decisions | | |
-| Training data provenance & quality | | |
 | Failure mode severity | | |
-| **Total Score** | **/40** | |
+| **Total Score** | **/30** | |
 
-**Risk Level:**
-- 1–15: 🟢 Low — Standard controls
-- 16–25: 🟡 Medium — Enhanced controls required
-- 26–35: 🟠 High — Security review required
-- 36–40: 🔴 Critical — CISO approval required
+**Thresholds:** 1–10 🟢 Low · 11–18 🟡 Medium · 19–24 🟠 High · 25–30 🔴 Critical
 
 ---
 
-## Section 3: Control Assessment
+## 3. OWASP LLM Top 10 Applicability
 
-### Access & Authorization
-- [ ] Principle of least privilege applied to AI agent permissions
-- [ ] Human-in-the-loop for high-risk actions
-- [ ] MFA on all AI management interfaces
-- [ ] Role-based access to AI configuration
-
-**Gaps identified:** ___________
-
-### Input Security
-- [ ] Input validation and sanitization implemented
-- [ ] Prompt injection detection active
-- [ ] Rate limiting on inference endpoints
-- [ ] Content filtering on user inputs
-
-**Gaps identified:** ___________
-
-### Data Protection
-- [ ] PII minimization in prompts
-- [ ] Training data access controls
-- [ ] Output filtering for sensitive data
-- [ ] Data retention limits enforced
-
-**Gaps identified:** ___________
-
-### Monitoring & Detection
-- [ ] Behavioral baseline established
-- [ ] Anomaly detection configured
-- [ ] Logging of all agent actions
-- [ ] Alerting on policy violations
-
-**Gaps identified:** ___________
-
-### Model Security
-- [ ] Model provenance verified
-- [ ] Supply chain review completed
-- [ ] Behavioral testing before deployment
-- [ ] Rollback capability tested
-
-**Gaps identified:** ___________
+| Risk | Applicable? | Notes |
+|------|-------------|-------|
+| LLM01: Prompt Injection | Yes / No | |
+| LLM02: Insecure Output Handling | Yes / No | |
+| LLM03: Training Data Poisoning | Yes / No | |
+| LLM04: Model Denial of Service | Yes / No | |
+| LLM05: Supply Chain Vulnerabilities | Yes / No | |
+| LLM06: Sensitive Information Disclosure | Yes / No | |
+| LLM07: Insecure Plugin Design | Yes / No | |
+| LLM08: Excessive Agency | Yes / No | |
+| LLM09: Overreliance | Yes / No | |
+| LLM10: Model Theft | Yes / No | |
 
 ---
 
-## Section 4: Identified Risks
+## 4. MITRE ATLAS Threat Model
 
-| Risk ID | Description | Likelihood | Impact | Score | Owner | Remediation |
-|---------|-------------|-----------|--------|-------|-------|-------------|
-| R-001 | | | | | | |
-| R-002 | | | | | | |
-| R-003 | | | | | | |
+| Technique ID | Technique | Likelihood | Impact | Control |
+|-------------|-----------|-----------|--------|---------|
+| AML.T0051 | LLM Prompt Injection | | | |
+| AML.T0020 | Training Data Poisoning | | | |
+| AML.T0048 | Exfiltration via Inference API | | | |
+| AML.T0015 | Evade ML Model | | | |
+| AML.T0029 | Denial of ML Service | | | |
+| *(add rows as needed)* | | | | |
 
----
-
-## Section 5: Recommendations
-
-### Immediate (< 30 days)
-1. 
-2. 
-
-### Short-term (30–90 days)
-1. 
-2. 
-
-### Long-term (90+ days)
-1. 
-2. 
+**Likelihood / Impact scale:** 1 = Low · 2 = Medium · 3 = High
 
 ---
 
-## Section 6: Sign-off
+## 5. Controls & Gaps
+
+| Control | Status | Owner | Due Date |
+|---------|--------|-------|----------|
+| Input validation & sanitization | | | |
+| Prompt architecture hardening | | | |
+| Output filtering | | | |
+| Audit logging | | | |
+| Human oversight / HITL | | | |
+| Least privilege (agent permissions) | | | |
+| Anomaly detection & monitoring | | | |
+| Data provenance tracking | | | |
+| *(add rows as needed)* | | | |
+
+**Status options:** ✅ In Place · 🔄 In Progress · ❌ Gap · N/A
+
+---
+
+## 6. Risk Decision
+
+- [ ] **Accept** — Risk is within tolerance; no action required
+- [ ] **Mitigate** — Implement controls to reduce risk (see Section 5)
+- [ ] **Transfer** — Shift risk via contract, insurance, or vendor SLA
+- [ ] **Avoid** — Do not deploy / discontinue system
+
+**Rationale:** ___________
+
+**Conditions (if Mitigate):**
+
+| Action | Owner | Due Date |
+|--------|-------|----------|
+| | | |
+| | | |
+
+---
+
+## 7. Sign-off
 
 | Role | Name | Date | Signature |
 |------|------|------|-----------|
 | Assessor | | | |
 | System Owner | | | |
 | Security Lead | | | |
-| CISO (if High/Critical) | | | |
+| CISO (if High / Critical) | | | |
 
 ---
 
