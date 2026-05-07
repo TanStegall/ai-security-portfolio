@@ -6,13 +6,14 @@
 
 ## Available Templates
 
-| Template | Use When |
-|----------|----------|
-| [AI System Inventory Record](./ai-system-inventory-template.md) | Registering any AI system in your org's inventory |
-| [AI Risk Assessment](./ai-risk-assessment-template.md) | Evaluating risk of a new AI system or feature |
-| [Agent Access Matrix](./agent-access-matrix-template.md) | Documenting and auditing all agents in a system |
-| [AI Vendor Security Assessment](./ai-vendor-assessment-template.md) | Onboarding a new AI vendor or LLM provider |
-| [AI Incident Report](./ai-incident-report-template.md) | Documenting an AI security incident |
+| Template | Use When | Send To |
+|----------|----------|---------|
+| [AI System Inventory Record](./ai-system-inventory-template.md) | Registering any AI system in your org's inventory | Internal |
+| [AI Risk Assessment](./ai-risk-assessment-template.md) | Evaluating risk of a new AI system or feature | Internal |
+| [Agent Access Matrix](./agent-access-matrix-template.md) | Documenting and auditing all agents in a system | Internal |
+| [AI Vendor Security Questionnaire](./ai-vendor-questionnaire.md) | Sent to vendor to complete before onboarding | **→ Vendor** |
+| [AI Vendor Security Assessment](./ai-vendor-assessment-template.md) | Your internal scorecard after vendor responds | Internal |
+| [AI Incident Report](./ai-incident-report-template.md) | Documenting an AI security incident | Internal |
 
 ---
 
@@ -22,19 +23,22 @@
 New AI System Identified
         │
         ▼
-[AI System Inventory Record]  ← Register it first
+[AI System Inventory Record]        ← Register it first
         │
         ▼
-[AI Risk Assessment]          ← Score its risk level
+[AI Risk Assessment]                ← Score its risk level
         │
         ▼
-[AI Vendor Assessment]        ← If using external LLM/API
+[AI Vendor Questionnaire]           ← Send to vendor to fill out
         │
         ▼
-[Agent Access Matrix]         ← If it uses AI agents
+[AI Vendor Security Assessment]     ← Your internal scorecard using their answers
         │
         ▼
-[AI Incident Report]          ← If something goes wrong
+[Agent Access Matrix]               ← If it uses AI agents
+        │
+        ▼
+[AI Incident Report]                ← If something goes wrong
 ```
 
 ---
